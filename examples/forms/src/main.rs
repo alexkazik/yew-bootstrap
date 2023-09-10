@@ -162,7 +162,7 @@ impl Component for Model {
         html! {
             <>
                 {include_inline()}
-                {include_cdn_icons()}
+                {BIFiles::cdn()}
                 <NavBar nav_id={"test-nav"} class="navbar-expand-lg navbar-light bg-light" brand={brand}>
                     <NavItem text="link 1" />
                     <NavItem text="link 2" />
