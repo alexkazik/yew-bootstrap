@@ -93,7 +93,7 @@
 use core::hash::{Hash, Hasher};
 use yew::html::{ChildrenRenderer, IntoPropValue};
 use yew::virtual_dom::{VNode, VRaw};
-use yew::{AttrValue, Html, ToHtml};
+use yew::{AttrValue, Html};
 
 /// Represents an bootstrap-icon.
 ///
@@ -178,10 +178,10 @@ impl IntoPropValue<ChildrenRenderer<VNode>> for &BI {
     }
 }
 
-impl ToHtml for BI {
+impl IntoPropValue<VNode> for BI {
     #[allow(clippy::inline_always)]
     #[inline(always)]
-    fn to_html(&self) -> Html {
+    fn into_prop_value(self) -> VNode {
         self.html()
     }
 }
